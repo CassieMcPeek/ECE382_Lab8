@@ -10,8 +10,8 @@ This lab will combine the two previous lab assignments in order to program my ro
  2. It is considered successful only if the robot finds one of the three exits and moves partially out of the maze.
  3. Door 1 - required functionality
  4. Door 2 - B functionality
- 5. Door 3 - A Functionalit
-        a. Robot cannot hit a wall.
+ 5. Door 3 - A Functionality
+     a. Robot cannot hit a wall.
  6. Must solve the maze in less than 3 minutes
  7. Robot will be stopped if it touches a wall more than twice
  8. Must use IR sensors to find path through the maze
