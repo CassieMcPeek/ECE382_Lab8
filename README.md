@@ -33,3 +33,11 @@ I plan on having my robot follow the left wall out of the maze, regardless of wh
 The schematic below combines the wiring from the past two labs to form the functioning robot. 
             
   ![alt text] (https://raw.github.com/CassieMcPeek/ECE382_Lab8/master/Schematic.jpg "Schematic")
+
+# Functionality
+
+# Conclusion
+
+# Documentation
+
+C2C Dusty Weisner assisted me a lot in debugging my code. He gave me the idea to use a max and min threshold for how close the robot should be to the left wall in order to make it through the maze. He also helped me a lot in determining the threshold of my sensors in order to have them be triggered at a reasonable distance from the wall. 
