@@ -59,7 +59,42 @@ This code worked well for the required functionality, and I demonstrated this to
 
 # B Functionality
 
-The code above worked will with required functionality, but for B functionality, there is a right turn that must be made, which the code doesn't account for. Therefore, I decided to follow the left wall through the maze by using Dusty Weisner's technique of using a max and min threshold of how close the robot should be to the left wall.
+The code above worked will with required functionality, but for B functionality, there is a right turn that must be made, which the code doesn't account for. Therefore, I decided to follow the left wall through the maze by using Dusty Weisner's technique of using a max and min threshold of how close the robot should be to the left wall. This took some more time to determine useful values for the max and min thresholds of the left IR sensor. Once I found the thresholds, I had to make sure that if the robot was not within that distance from the wall, that it corrected itself. I used the following code to do this:
+
+       	 if(leftSensor() < 0x190)
+    	     {
+    		      	turnLeftLittle();
+    			     _delay_cycles(9000);
+    			     stopMovement();
+    		    	_delay_cycles(100000);
+    	     }
+    	    if(leftSensor() >= 0x180)
+    	     {
+    		      turnRightLittle();
+    		     _delay_cycles(9000);
+    		      stopMovement();
+   			    _delay_cycles(100000);
+    	     }
+
+Once I had that done, I needed to add the code to make a right turn if both the left sensor and center senser were triggered. The following code completed this task:
+
+      	 if (centerSensor() >=0x180 && leftSensor() >= 0x170)
+    	      {
+    		        turnRightBig();
+    		        _delay_cycles(10000);
+    		        stopMovement();
+    		       _delay_cycles(100000);
+    	       }
+    	       
+While this code had the right logic, there was a slight issue with it. Because I had it following the left wall, instead of waiting until it sensed the center wall to turn left (like in required functionality), I wanted it to make a turn as soon as the left wall was no longer detected. This was done by using the threshold code above, but it made too wide of a turn. The wide turn made it hard for the robot to get back and follow the left wall in time to detect the center wall and make a right turn. So, in order to make the robot turn sharper, I changed the way the robot turned. Instead of stopping one motor and only having one move forward to turn the robot, I did a tank turn. For this, I had one motor moving forward, while the other moved backwards. This made the turn sharper and therefore the robot could follow the wall more easily.
+
+I took a video of my B functionality on 11 DEC 2014 at 1600. I will show the video to Capt Trimble in class. 
+
+# A functionality
+
+I have good code to get through the third door, the only problem is that my robot hits the wall at various times. I think this is due to the shadows in the maze that distract the IR sensors. In order to combat this, I will try using a different maze and possibly increasing the threshold for sensing the left wall. 
+
+
 # Conclusion
 
 # Documentation
