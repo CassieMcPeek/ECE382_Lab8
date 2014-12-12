@@ -90,12 +90,15 @@ While this code had the right logic, there was a slight issue with it. Because I
 
 I took a video of my B functionality on 11 DEC 2014 at 1600. I will show the video to Capt Trimble in class. 
 
-# A functionality
+# A/Bonus functionality
 
 I have good code to get through the third door, the only problem is that my robot hits the wall at various times. I think this is due to the shadows in the maze that distract the IR sensors. In order to combat this, I will try using a different maze and possibly increasing the threshold for sensing the left wall. 
 
+After playing with the threshold values and trying all three mazes, I was able to acheive A functionality and Bonus functionality. I recorded videos of these and will show them to Capt Trimble. 
 
 # Conclusion
+
+This lab was quite frustrating at times becuse the IR sensors were not very reliable. It took a lot of testing and debugging to find the right thresholds for the sensors that would guide the robot through the maze. Once I was able to find decent thresholds, it just took a lot of testing to complete the A and Bonus functionalities. With the shadows in the mazes, the robot would make it through fine one time, but the next time would run into a wall at a random point. Even though there were a lot of isseus, this was defintely the best lab out of the class
 
 # Documentation
 
