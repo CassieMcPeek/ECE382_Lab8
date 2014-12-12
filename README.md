@@ -88,11 +88,13 @@ Once I had that done, I needed to add the code to make a right turn if both the 
     	       
 While this code had the right logic, there was a slight issue with it. Because I had it following the left wall, instead of waiting until it sensed the center wall to turn left (like in required functionality), I wanted it to make a turn as soon as the left wall was no longer detected. This was done by using the threshold code above, but it made too wide of a turn. The wide turn made it hard for the robot to get back and follow the left wall in time to detect the center wall and make a right turn. So, in order to make the robot turn sharper, I changed the way the robot turned. Instead of stopping one motor and only having one move forward to turn the robot, I did a tank turn. For this, I had one motor moving forward, while the other moved backwards. This made the turn sharper and therefore the robot could follow the wall more easily.
 
+Once I had B functionality, I moved onto A. I didn't demonstrate B functionality because I was able to demonstrate A functionality which covers B functionality as well. 
+
 # A/Bonus functionality
 
 I have good code to get through the third door, the only problem is that my robot hits the wall at various times. I think this is due to the shadows in the maze that distract the IR sensors. In order to combat this, I tried using a different maze and increasing the threshold for sensing the left wall. 
 
-After playing with the threshold values and trying all three mazes, I was able to acheive A functionality and Bonus functionality. I cemonstrated A functionality to Capt Trimble, and then demonstrated Bonus functionality to Mr. Evans during class on 12 DEC 2014 around 1250. 
+After playing with the threshold values and trying all three mazes, I was able to acheive A functionality and Bonus functionality. I demonstrated A functionality to Capt Trimble, and then demonstrated Bonus functionality to Mr. Evans during class on 12 DEC 2014 around 1250. 
 
 # Conclusion
 
